@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<div style="width:80%; margin:auto">
+			<a href="/unit5/newpost">Post</a> &nbsp;&nbsp; <a href="/unit5/">Blogs</a>
+			{% for b in blogs %}
+			<div style="margin:10px 10px 30px 10px;">
+				<div>
+					<span style="font-size:28px;">
+						<b>{{ b.subject }}</b>
+					</span>
+					<span>
+						{{ b.created }}
+					</span>
+					<span style="float:right;">
+						{{ b.author.UserName }}
+					</span>
+				</div>
+				<hr style="width:100%">
+				<div>
+					{{ b.content }}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>

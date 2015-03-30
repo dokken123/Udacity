@@ -1,0 +1,19 @@
+<form method="post">
+	<P>
+		User Name: <input type="text" name="username" value="{{ username }}" />
+		<span style="color:#FF0000;"><b>{{ error1 }}</b></span>
+	</P>
+	<P>
+		Password: <input type="password" name="password" />
+		<span style="color:#FF0000;"><b>{{ error2 }}</b></span>
+	</P>
+	<P>
+		Verify: <input type="password" name="verify" />
+		<span style="color:#FF0000;"><b>{{ error4 }}</b></span>
+	</P>
+	<P>
+		Email: <input type="text" name="email" value="{{ email }}" />
+		<span style="color:#FF0000;"><b>{{ error8 }}</b></span>
+	</P>
+	<input type="submit" /> &nbsp;&nbsp; <a href="login">Login</a>
+</form>

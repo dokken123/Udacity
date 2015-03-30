@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/styles/wiki.css">
+	</head>
+	<body>
+		<div class="wiki-title">
+			<span>Welcome to the Wiki: {{ wiki.title }}</span>
+			<div class="wiki-controls" style="float:right;">
+				<span><a href="/wiki/_edit/{{ wiki.title }}">Edit</a> | <a href="/wiki/_history/{{ wiki.title }}">History</a></span>
+				&nbsp;&nbsp;
+				{% if user %}
+				<span>{{ user.UserName }}| <a href="/wiki/logout">Logout</a></span>
+				{% else %}
+				<span><a href="/wiki/login">Login</a> | <a href="/wiki/signup">SignUp</a></span>
+				{% endif %}
+			</div>
+		</div>	
+		<div class="wiki-content">
+			{{ wiki.content }}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/styles/wiki.css">
+	</head>
+	<body>
+		<h2>
+			{{ wikititle }}
+		</h2>
+		<div class="wiki-history">
+			{% for w in wikis %}
+				<div class="wiki-history-item">
+					<div class="wiki-content">{{ w.content | escape }}</div>
+					<div class="wiki-created">{{ w.created }}</div>
+					<div class="wiki-author">{{ w.author.UserName }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+.wiki-title{
+	height:40px;
+}
+
+.wiki-title span{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.wiki-controls span, .wiki-controls a{
+	font-size: 12px;
+	font-family: verdana;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+
+.wiki-controls a:hover{
+	color: #000000;
+}
+
+.wiki-history{
+	width: 90%;
+	height: auto;
+	min-height: 150px;
+	margin: 0px auto;
+}
+
+.wiki-history-item{
+	width: 100%;	
+	height: auto;
+	min-height: 50px;
+}
+
+.wiki-history-item .wiki-content{
+	float: left;
+	width: 700px;
+}
+
+.wiki-history-item .wiki-created{
+	float: left;
+	width: 200px;
+}
+
+.wiki-history-item .wiki-author{
+	float: left;
+	width: 100px;
+}

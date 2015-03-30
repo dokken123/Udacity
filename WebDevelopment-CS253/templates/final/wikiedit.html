@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/styles/wiki.css">
+	</head>
+	<body>
+		<form method="POST">
+			<div class="wiki-title">
+				<span>{{ wiki.title }}</span>
+				<div class="wiki-controls" 	style="float:right;">
+					{% if user %}
+					<span>{{ user.UserName }}| <a href="/wiki/logout">Logout</a></span>
+					{% else %}
+					<span><a href="/wiki/login">Login</a> | <a href="/wiki/signup">SignUp</a></span>
+					{% endif %}
+				</div>
+			</div>	
+			<div class="wiki-content">
+				<textarea name="content" style="width:300px;height:200px">{{ wiki.content }}</textarea>
+			</div>
+			{% if errormsg %}
+			<span class="errormsg">{{ errormsg }}</span>
+			{% endif %}
+			<input type="submit" />
+		</form>
+	</body>
+</html>

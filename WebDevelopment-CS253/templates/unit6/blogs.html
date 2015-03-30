@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<div style="width:80%; margin:auto">
+			<a href="/unit6/newpost">Post</a> &nbsp;&nbsp; <a href="/unit6/">Blogs</a>
+			{% for b in blogs %}
+			<div style="margin:10px 10px 30px 10px;">
+				<div>
+					<span style="font-size:28px;">
+						<b><a href="/unit6/{{ b.key().id() }}">{{ b.subject }}</a></b>
+					</span>
+					<span>
+						{{ b.created }}
+					</span>
+					<span style="float:right;">
+						{{ b.author.UserName }}
+					</span>
+				</div>
+				<hr style="width:100%">
+				<div>
+					{{ b.content }}
+				</div>
+			</div>
+			{% endfor %}
+			<span style="float:right;">Queried {{ last_cache }} seconds ago</span>
+		</div>
+	</body>
+</html>
